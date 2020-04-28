@@ -1,43 +1,43 @@
 #N canvas 2391 9 1200 587 12;
 #X obj 103 118 notein;
-#X floatatom 731 118 3 0 0 0 - - -;
-#X floatatom 712 81 3 0 0 0 - - -;
-#X obj 712 52 ctlin;
-#X obj 712 109 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
+#X floatatom 1007 180 3 0 0 0 - - -;
+#X floatatom 988 143 3 0 0 0 - - -;
+#X obj 988 114 ctlin;
+#X obj 988 171 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 111 325 dac~;
-#X obj 567 52 notein;
-#X text 617 106 midi number;
-#X text 617 80 velocity;
-#X text 567 25 MIDI NOTE;
-#X text 712 25 MIDI CONTROL;
-#X text 750 80 velocity;
-#X text 750 106 midi number;
+#X obj 843 114 notein;
+#X text 893 168 midi number;
+#X text 893 142 velocity;
+#X text 843 87 MIDI NOTE;
+#X text 988 87 MIDI CONTROL;
+#X text 1026 142 velocity;
+#X text 1026 168 midi number;
 #X obj 111 296 *~;
-#X floatatom 567 81 5 0 0 0 - - -;
-#X floatatom 567 109 5 0 0 0 - - -;
+#X floatatom 843 143 5 0 0 0 - - -;
+#X floatatom 843 171 5 0 0 0 - - -;
 #X obj 179 296 hsl 128 15 0 1 0 0 empty empty Volume -2 -8 0 10 -262144
--1 -1 2700 0;
+-1 -1 4700 0;
 #X obj 104 160 poly 1 1;
 #X obj 104 189 pack 0 0 0;
 #X obj 104 218 route 1;
-#X obj 555 212 vsl 15 128 10 10010 1 1 empty empty Attack 0 -9 0 10
--262144 -1 -1 6500 0;
-#X obj 625 214 vsl 15 128 10 10010 1 1 empty empty Decay 0 -9 0 10
--262144 -1 -1 6000 0;
-#X obj 683 214 vsl 15 128 0.1 1.1 1 1 empty empty Sustain 0 -9 0 10
--262144 -1 -1 8700 0;
-#X obj 755 213 vsl 15 128 10 10010 1 1 empty empty Release 0 -9 0 10
--262144 -1 -1 6500 0;
-#X obj 554 375 s attack;
-#X obj 625 374 s decay;
-#X obj 681 374 s sustain;
-#X obj 757 373 s release;
+#X obj 387 151 vsl 15 128 10 10010 1 1 empty empty Attack 0 -9 0 10
+-262144 -1 -1 5100 0;
+#X obj 457 153 vsl 15 128 10 10010 1 1 empty empty Decay 0 -9 0 10
+-262144 -1 -1 5200 0;
+#X obj 515 153 vsl 15 128 0.1 1.1 1 1 empty empty Sustain 0 -9 0 10
+-262144 -1 -1 9600 0;
+#X obj 587 152 vsl 15 128 10 10010 1 1 empty empty Release 0 -9 0 10
+-262144 -1 -1 5700 0;
+#X obj 386 314 s attack;
+#X obj 457 313 s decay;
+#X obj 513 313 s sustain;
+#X obj 589 312 s release;
 #X obj 105 252 note;
-#X obj 554 345 - 10;
-#X obj 625 347 - 10;
-#X obj 682 347 - 0.1;
-#X obj 755 349 - 10;
+#X obj 386 284 - 10;
+#X obj 457 286 - 10;
+#X obj 514 286 - 0.1;
+#X obj 587 288 - 10;
 #X obj 176 481 unpack 0 0;
 #X floatatom 311 503 5 0 0 0 - - -;
 #X obj 243 516 sel 0;
@@ -46,6 +46,8 @@
 #X floatatom 378 533 5 0 0 0 - - -;
 #X obj 305 613 pack 0 0;
 #X floatatom 277 564 5 0 0 0 - - -;
+#X obj 498 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 17 0;
 #X connect 0 1 17 1;
 #X connect 2 0 4 0;
@@ -77,4 +79,8 @@
 #X connect 38 0 39 0;
 #X connect 39 0 36 0;
 #X connect 40 0 39 0;
+#X connect 41 0 20 0;
+#X connect 41 0 21 0;
+#X connect 41 0 22 0;
+#X connect 41 0 23 0;
 #X coords 0 0 2 2 0 0 0;
