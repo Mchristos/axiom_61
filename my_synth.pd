@@ -21,14 +21,14 @@
 #X obj 104 160 poly 1 1;
 #X obj 104 189 pack 0 0 0;
 #X obj 104 218 route 1;
-#X obj 555 212 vsl 15 128 10 10010 1 0 empty empty Attack 0 -9 0 10
--262144 -1 -1 3700 0;
-#X obj 625 214 vsl 15 128 10 10010 1 0 empty empty Decay 0 -9 0 10
--262144 -1 -1 3200 0;
-#X obj 683 214 vsl 15 128 0.1 1.1 1 0 empty empty Sustain 0 -9 0 10
--262144 -1 -1 5300 0;
-#X obj 755 213 vsl 15 128 10 10010 1 0 empty empty Release 0 -9 0 10
--262144 -1 -1 2600 0;
+#X obj 555 212 vsl 15 128 10 10010 1 1 empty empty Attack 0 -9 0 10
+-262144 -1 -1 6500 0;
+#X obj 625 214 vsl 15 128 10 10010 1 1 empty empty Decay 0 -9 0 10
+-262144 -1 -1 6000 0;
+#X obj 683 214 vsl 15 128 0.1 1.1 1 1 empty empty Sustain 0 -9 0 10
+-262144 -1 -1 8700 0;
+#X obj 755 213 vsl 15 128 10 10010 1 1 empty empty Release 0 -9 0 10
+-262144 -1 -1 6500 0;
 #X obj 554 375 s attack;
 #X obj 625 374 s decay;
 #X obj 681 374 s sustain;
