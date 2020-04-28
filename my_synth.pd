@@ -1,0 +1,73 @@
+#N canvas 2391 9 1200 587 12;
+#X obj 103 118 notein;
+#X floatatom 731 118 3 0 0 0 - - -;
+#X floatatom 712 81 3 0 0 0 - - -;
+#X obj 712 52 ctlin;
+#X obj 712 109 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 111 325 dac~;
+#X obj 567 52 notein;
+#X text 617 106 midi number;
+#X text 617 80 velocity;
+#X text 567 25 MIDI NOTE;
+#X text 712 25 MIDI CONTROL;
+#X text 750 80 velocity;
+#X text 750 106 midi number;
+#X obj 111 296 *~;
+#X floatatom 567 81 5 0 0 0 - - -;
+#X floatatom 567 109 5 0 0 0 - - -;
+#X obj 179 296 hsl 128 15 0 1 0 0 empty empty Volume -2 -8 0 10 -262144
+-1 -1 1700 1;
+#X obj 104 160 poly 1 1;
+#X obj 104 189 pack 0 0 0;
+#X obj 104 218 route 1;
+#X obj 577 207 vsl 15 128 10 10010 1 0 empty empty Attack 0 -9 0 10
+-262144 -1 -1 8100 1;
+#X obj 621 207 vsl 15 128 10 10010 1 0 empty empty Decay 0 -9 0 10
+-262144 -1 -1 2400 1;
+#X obj 666 207 vsl 15 128 0.1 1.1 1 0 empty empty Sustain 0 -9 0 10
+-262144 -1 -1 4300 1;
+#X obj 713 207 vsl 15 128 10 10010 1 0 empty empty Release 0 -9 0 10
+-262144 -1 -1 3100 1;
+#X obj 713 346 -10;
+#X floatatom 713 375 5 0 0 0 - - -;
+#X floatatom 666 346 5 0 0 0 - - -;
+#X obj 666 374 -0.1;
+#X floatatom 621 346 5 0 0 0 - - -;
+#X obj 621 374 -10;
+#X floatatom 577 346 5 0 0 0 - - -;
+#X obj 577 374 -10;
+#X obj 577 403 s attack;
+#X obj 622 427 s decay;
+#X obj 666 403 s sustain;
+#X obj 713 429 s release;
+#X obj 111 267 note;
+#X connect 0 0 17 0;
+#X connect 0 1 17 1;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 3 1 1 0;
+#X connect 6 0 15 0;
+#X connect 6 1 14 0;
+#X connect 13 0 5 0;
+#X connect 13 0 5 1;
+#X connect 16 0 13 1;
+#X connect 17 0 18 0;
+#X connect 17 1 18 1;
+#X connect 17 2 18 2;
+#X connect 18 0 19 0;
+#X connect 19 0 36 0;
+#X connect 20 0 31 0;
+#X connect 21 0 29 0;
+#X connect 22 0 27 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 35 0;
+#X connect 26 0 34 0;
+#X connect 27 0 26 0;
+#X connect 28 0 33 0;
+#X connect 29 0 28 0;
+#X connect 30 0 32 0;
+#X connect 31 0 30 0;
+#X connect 36 0 13 0;
+#X coords 0 0 2 2 0 0 0;
