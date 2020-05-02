@@ -1,4 +1,4 @@
-#N canvas 2391 659 1200 587 12;
+#N canvas 480 148 1200 587 12;
 #X obj 88 153 mtof;
 #X text 129 149 "midi to frequency";
 #X obj 90 262 *~;
