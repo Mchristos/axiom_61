@@ -1,4 +1,4 @@
-#N canvas 436 11 1200 1030 12;
+#N canvas 952 0 958 966 12;
 #X obj 345 231 inlet;
 #X obj 402 627 outlet~;
 #X obj 624 303 r attack;

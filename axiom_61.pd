@@ -1,4 +1,4 @@
-#N canvas 255 134 1157 733 12;
+#N canvas -8 0 958 966 12;
 #X obj 596 403 notein;
 #X floatatom 611 254 3 0 0 0 - - -;
 #X floatatom 611 226 3 0 0 0 - - -;
@@ -16,13 +16,13 @@
 #X floatatom 466 254 5 0 0 0 - - -;
 #X obj 596 461 pack 0 0 0;
 #X obj 196 321 vsl 15 128 0 127 0 1 empty empty Attack 0 -9 0 10 -262144
--1 -1 0 0;
-#X obj 236 321 vsl 15 128 0 127 0 1 empty empty Decay 0 -9 0 10 -262144
--1 -1 11600 0;
-#X obj 281 321 vsl 15 128 0 127 0 1 empty empty Sustain 0 -9 0 10 -262144
--1 -1 1500 0;
-#X obj 327 321 vsl 15 128 0 127 0 1 empty empty Release 0 -9 0 10 -262144
 -1 -1 1400 0;
+#X obj 236 321 vsl 15 128 0 127 0 1 empty empty Decay 0 -9 0 10 -262144
+-1 -1 9600 0;
+#X obj 281 321 vsl 15 128 0 127 0 1 empty empty Sustain 0 -9 0 10 -262144
+-1 -1 7200 0;
+#X obj 327 321 vsl 15 128 0 127 0 1 empty empty Release 0 -9 0 10 -262144
+-1 -1 4900 0;
 #X obj 143 496 s attack;
 #X obj 245 496 s decay;
 #X obj 345 496 s sustain;
@@ -34,7 +34,7 @@
 #X obj 651 525 note;
 #X obj 685 552 note;
 #X obj 141 321 vsl 15 128 0 127 0 0 empty empty Volume 0 -9 0 10 -262144
--1 -1 3200 0;
+-1 -1 3900 0;
 #X obj 79 496 s volume;
 #X obj 734 552 r volume;
 #X obj 141 181 ctlin;
@@ -45,21 +45,23 @@
 #X text 213 129 CONTROLS;
 #X text 602 363 SYNTH;
 #X obj 141 259 route 82 83 28 29 81;
-#X obj 141 207 pack f f;
 #X msg 141 233 \$2 \$1;
-#X obj 787 307 r volume;
-#X obj 751 205 r attack;
-#X obj 751 254 r decay;
-#X obj 828 205 r sustain;
-#X obj 828 254 r release;
-#X floatatom 787 333 5 0 0 0 - - -;
-#X floatatom 751 230 5 0 0 0 - - -;
-#X floatatom 751 279 5 0 0 0 - - -;
-#X floatatom 828 230 5 0 0 0 - - -;
-#X floatatom 828 279 5 0 0 0 - - -;
+#X obj 834 360 r volume;
+#X obj 798 258 r attack;
+#X obj 798 307 r decay;
+#X obj 875 258 r sustain;
+#X obj 875 307 r release;
+#X floatatom 834 386 5 0 0 0 - - -;
+#X floatatom 798 283 5 0 0 0 - - -;
+#X floatatom 798 332 5 0 0 0 - - -;
+#X floatatom 875 283 5 0 0 0 - - -;
+#X floatatom 875 332 5 0 0 0 - - -;
 #X obj 419 465 midilog 5000;
 #X obj 245 465 midilog 5000;
-#X text 792 170 A/S/D/R;
+#X obj 141 207 pack f f;
+#X text 822 223 A/S/D/R values;
+#X obj 110 557 ctlin 64;
+#X floatatom 110 583 5 0 0 0 - - -;
 #X connect 0 0 25 0;
 #X connect 0 1 25 1;
 #X connect 3 0 2 0;
@@ -70,9 +72,9 @@
 #X connect 12 0 4 1;
 #X connect 15 0 26 0;
 #X connect 16 0 35 0;
-#X connect 17 0 54 0;
+#X connect 17 0 53 0;
 #X connect 18 0 36 0;
-#X connect 19 0 53 0;
+#X connect 19 0 52 0;
 #X connect 24 0 12 0;
 #X connect 25 0 15 0;
 #X connect 25 1 15 1;
@@ -86,8 +88,8 @@
 #X connect 29 0 12 0;
 #X connect 30 0 34 0;
 #X connect 32 0 12 1;
-#X connect 33 0 41 0;
-#X connect 33 1 41 1;
+#X connect 33 0 54 0;
+#X connect 33 1 54 1;
 #X connect 34 0 31 0;
 #X connect 35 0 20 0;
 #X connect 36 0 22 0;
@@ -96,13 +98,14 @@
 #X connect 40 2 17 0;
 #X connect 40 3 18 0;
 #X connect 40 4 19 0;
-#X connect 41 0 42 0;
-#X connect 42 0 40 0;
+#X connect 41 0 40 0;
+#X connect 42 0 47 0;
 #X connect 43 0 48 0;
 #X connect 44 0 49 0;
 #X connect 45 0 50 0;
 #X connect 46 0 51 0;
-#X connect 47 0 52 0;
-#X connect 53 0 23 0;
-#X connect 54 0 21 0;
+#X connect 52 0 23 0;
+#X connect 53 0 21 0;
+#X connect 54 0 41 0;
+#X connect 56 0 57 0;
 #X coords 0 0 2 2 0 0 0;
